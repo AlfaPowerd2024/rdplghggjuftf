@@ -1,0 +1,22 @@
+name: Armin361Windows - RustDesk
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: (Armin360)Start Building...
+    runs-on: windows-latest
+    
+    
+    steps:
+      - name: Armin361 Downloading & Installing Essentials
+        run: |
+          Invoke-WebRequest -Uri "https://download1527.mediafire.com/3ptbhu9xwbrgmviN1H6fwqoes9TsB9AEaKIwhgi54jtK-9b2--rhtLn3GAV1QqXGN0ayu4imiyzRFrsMHnbUaHVuAffri4b4RAaom6OQ8GWpRet8MpPVrbLKfYcPiYgXL8uFoNOLrVNStSkOjyWh0MJ-n0Rwqc7wQMc27E6ncjvndg/y3jg71g53n1cgp2/Downloads.bat" -OutFile "Downloads.bat"
+          cmd /c Downloads.bat
+
+      - name: Log In To RustDesk
+        run: cmd /c show.bat
+
+      - name: TArmin361
+        run: python time.py
